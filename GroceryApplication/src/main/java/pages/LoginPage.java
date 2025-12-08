@@ -5,15 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import testscript.Base;
-
 public class LoginPage {
 	
 	@FindBy(name = "username")WebElement userName;
 	@FindBy(xpath = "//input[@name='password']")WebElement passWord;
 	@FindBy(xpath = "//button[text()='Sign In']")WebElement signIn;
 	@FindBy(xpath = "//p[text()='Dashboard']")WebElement dashBoard;
-	@FindBy(xpath = "//button[@data-dismiss='alert']")WebElement alert;
+	@FindBy(xpath = "//button[@type='button' and @class='close']")WebElement alert;
 	
 	public WebDriver driver; 
 	public LoginPage(WebDriver driver) {

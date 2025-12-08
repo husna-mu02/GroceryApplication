@@ -56,4 +56,10 @@ public class PageUtilities {
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].value = 'value';", element);
 		}
+		public void clickbyJS(WebDriver driver, WebElement element) {
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].click();", element);
+		}
+		
+		
 }

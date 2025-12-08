@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class AdminUsersTest extends Base {
-	@Test
+	@Test (priority = 6, groups= {"regression"})
 	public void verifyThatUserIsAbleToNavigateToAdminUsersPage() throws IOException {
 		String username = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(1, 1, "loginpage");

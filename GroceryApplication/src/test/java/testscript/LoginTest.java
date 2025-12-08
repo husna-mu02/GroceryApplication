@@ -9,7 +9,7 @@ import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class LoginTest extends Base {
-	@Test
+	@Test (priority = 1)
 	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws IOException {
 		String userName = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String passWord = ExcelUtilities.readStringData(1, 1, "loginpage");
@@ -20,7 +20,7 @@ public class LoginTest extends Base {
 		boolean homepage = loginPage.isHomePageDisplayed();
 		Assert.assertTrue(homepage);
 	}
-	@Test
+	@Test (priority = 2)
 	public void verifyTheUserIsUnableToLoginUsingInvalidPassword() throws IOException {
 		String username = ExcelUtilities.readStringData(2, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(2, 1, "loginpage");
@@ -31,7 +31,7 @@ public class LoginTest extends Base {
 		boolean alert = loginPage.isAlertDisplayed();
 		Assert.assertTrue(alert);
 	}
-	@Test
+	@Test (priority = 3)
 	public void verifyTheUserIsUnableToLoginUsingInvalidUsername() throws IOException {
 		String username =ExcelUtilities.readStringData(3, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(3, 1, "loginpage");
@@ -42,7 +42,7 @@ public class LoginTest extends Base {
 		boolean alert = loginPage.isAlertDisplayed();
 		Assert.assertTrue(alert);
 	}
-	@Test
+	@Test (priority = 4)
 	public void verifyTheUserIsUnableToLoginUsingInvalidPasswordAndUsername() throws IOException {
 		String username = ExcelUtilities.readStringData(4, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(4, 1, "loginpage");

@@ -10,7 +10,7 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")WebElement newButton;
 	@FindBy(xpath = "//textarea[@id='news']")WebElement newsTextField;
 	@FindBy(xpath = "//button[text()='Save']")WebElement saveButton; 
-	@FindBy(xpath = "//div[@class='col-sm-12']")WebElement alert;
+	@FindBy(xpath = "//button[@aria-hidden='true' and @data-dismiss='alert']")WebElement alert;
 	
 	public WebDriver driver;
 	public ManageNewsPage(WebDriver driver) {

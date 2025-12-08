@@ -10,7 +10,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtilities;
 
 public class ManageNewsTest extends Base {
-	@Test
+	@Test (priority = 5)
 	public void verifyTheUserIsAbleToNavigateToTheManageNewsPage() throws IOException {
 		String username = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(1, 1, "loginpage");
