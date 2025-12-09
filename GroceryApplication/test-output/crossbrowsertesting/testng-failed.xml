@@ -4,13 +4,14 @@
   <test thread-count="5" name="FirefoxTest(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testscript.ManageCategoryTest">
+      <class name="testscript.LoginTest">
         <methods>
           <include name="browserQuitAndClose"/>
           <include name="browserInitialization"/>
-          <include name="validateThatUserIsAbleToManageCategories"/>
+          <include name="verifyTheUserIsUnableToLoginUsingInvalidPasswordAndUsername"/>
+          <include name="verifyTheUserIsUnableToLoginUsingInvalidUsername"/>
         </methods>
-      </class> <!-- testscript.ManageCategoryTest -->
+      </class> <!-- testscript.LoginTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [crossbrowsertesting] -->

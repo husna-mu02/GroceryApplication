@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ChromeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 08 14:23:14 IST 2025</td>
+<td>Started on:</td><td>Tue Dec 09 12:09:22 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38250 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (638 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,55 +76,71 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testscript.ManageCategoryTest.validateThatUserIsAbleToManageCategories()'><b>validateThatUserIsAbleToManageCategories</b><br>Test class: testscript.ManageCategoryTest</td>
-<td></td>
-<td>2</td>
-<td>testscript.ManageCategoryTest@22555ebf</td></tr>
-<tr>
-<td title='testscript.LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()'><b>verifyTheUserIsAbleToLoginUsingValidCredentials</b><br>Test class: testscript.LoginTest</td>
-<td></td>
-<td>2</td>
-<td>testscript.LoginTest@7eac9008</td></tr>
-<tr>
-<td title='testscript.AdminUsersTest.verifyThatUserIsAbleToNavigateToAdminUsersPage()'><b>verifyThatUserIsAbleToNavigateToAdminUsersPage</b><br>Test class: testscript.AdminUsersTest</td>
-<td></td>
-<td>2</td>
-<td>testscript.AdminUsersTest@9d5509a</td></tr>
-<tr>
-<td title='testscript.ManageFooterTextTest.validateThatUserIsAbleToUpdateFooterTextInformation()'><b>validateThatUserIsAbleToUpdateFooterTextInformation</b><br>Test class: testscript.ManageFooterTextTest</td>
-<td></td>
-<td>2</td>
-<td>testscript.ManageFooterTextTest@1fa121e2</td></tr>
-<tr>
-<td title='testscript.LoginTest.verifyTheUserIsUnableToLoginUsingInvalidPasswordAndUsername()'><b>verifyTheUserIsUnableToLoginUsingInvalidPasswordAndUsername</b><br>Test class: testscript.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>testscript.LoginTest@7eac9008</td></tr>
-<tr>
-<td title='testscript.ManageContactTest.verifyThatUserIsAbleToManageContact()'><b>verifyThatUserIsAbleToManageContact</b><br>Test class: testscript.ManageContactTest</td>
-<td></td>
-<td>3</td>
-<td>testscript.ManageContactTest@179ece50</td></tr>
-<tr>
-<td title='testscript.LoginTest.verifyTheUserIsUnableToLoginUsingInvalidPassword()'><b>verifyTheUserIsUnableToLoginUsingInvalidPassword</b><br>Test class: testscript.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>testscript.LoginTest@7eac9008</td></tr>
-<tr>
-<td title='testscript.ManageNewsTest.verifyTheUserIsAbleToNavigateToTheManageNewsPage()'><b>verifyTheUserIsAbleToNavigateToTheManageNewsPage</b><br>Test class: testscript.ManageNewsTest</td>
-<td></td>
-<td>2</td>
-<td>testscript.ManageNewsTest@3b0090a4</td></tr>
-<tr>
-<td title='testscript.LoginTest.verifyTheUserIsUnableToLoginUsingInvalidUsername()'><b>verifyTheUserIsUnableToLoginUsingInvalidUsername</b><br>Test class: testscript.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>testscript.LoginTest@7eac9008</td></tr>
-<tr>
-<td title='testscript.LogOutTest.VerifyThatUserIsAbleToLogOut()'><b>VerifyThatUserIsAbleToLogOut</b><br>Test class: testscript.LogOutTest</td>
-<td></td>
-<td>1</td>
-<td>testscript.LogOutTest@3cd3e762</td></tr>
-</table><p>
-</body>
-</html>
+<td title='testscript.AdminUsersTest.browserInitialization()'><b>browserInitialization</b><br>Test class: testscript.AdminUsersTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from unknown error: failed to write prefs file 
+Host info: host: &apos;SALMA-THASNI&apos;, ip: &apos;192.168.18.250&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:110)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at testscript.Base.browserInitialization(Base.java:37)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2132806421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2132806421'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from unknown error: failed to write prefs file 
+Host info: host: &apos;SALMA-THASNI&apos;, ip: &apos;192.168.18.250&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:110)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at testscript.Base.browserInitialization(Base.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.j
