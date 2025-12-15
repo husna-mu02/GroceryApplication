@@ -17,7 +17,7 @@
   <parameter name="browser" value="Firefox"></parameter>
     <classes>
       <class name="testscript.ManageCategoryTest"/>
-     <class name="testscript.AdminUsersTest"/>
+      <class name="testscript.AdminUsersTest"/>
       <class name="testscript.ManageContactTest"/>
       <class name="testscript.ManageNewsTest"/>
       <class name="testscript.LogOutTest"/>

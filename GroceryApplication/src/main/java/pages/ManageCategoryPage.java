@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtilities;
 
 public class ManageCategoryPage {
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']//child::p")WebElement manageCategory;
+	
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement newButton;
 	@FindBy(xpath = "//input[@placeholder='Enter the Category']")WebElement category;
 	@FindBy(id = "134-selectable")WebElement selectGroups;
@@ -25,41 +25,46 @@ public class ManageCategoryPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void clickOnManageCategory() {
-		manageCategory.click();
-	}
-	public void clickOnNewButton() {
+	
+	public ManageCategoryPage clickOnNewButton() {
 		newButton.click();
+		return this;
 	}
-	public void enterCategory(String category2) {
+	public ManageCategoryPage enterCategory(String category2) {
 		category.sendKeys(category2);
+		return this;
 	}
-	public void clickOnDiscount() {
+	public ManageCategoryPage clickOnDiscount() {
 		selectGroups.click();
+		return this;
 	}
-	public void chooseFile() {
+	public ManageCategoryPage chooseFile() {
 		chooseFile.sendKeys("C:\\Users\\salma\\Desktop\\superhusna\\foto\\sun.png");
+		return this;
 	}
-	public void selectYesFromShowOnTopMenu() {
+	public ManageCategoryPage selectYesFromShowOnTopMenu() {
 		if(showOnTopMenu.isSelected()) {
 			System.out.println("YES button is already selected.");
 		}
 		else {
 			showOnTopMenu.click();
 		}
+		return this;
 	}
-	public void selectYesFromShowOnLeftMenu() {
+	public ManageCategoryPage selectYesFromShowOnLeftMenu() {
 		if(showOnLeftMenu.isSelected()) {
 			System.out.println("YES button is already selected.");
 		}
 		else {
 			showOnLeftMenu.click();
 		}
+		return this;
 	}
-	public void clickOnSaveButton() {
+	public ManageCategoryPage clickOnSaveButton() {
 		//saveButton.click();
 		PageUtilities pageUtilities = new PageUtilities();
 		pageUtilities.clickbyJS(driver, saveButton);
+		return this;
 	}
 	public boolean isCategoryAlertCreated() {
 		return addCategoryAlert.isDisplayed();

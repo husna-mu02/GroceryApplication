@@ -16,22 +16,19 @@ public class Listeners implements ITestListener {
 	
 	ExtentReports extent = ExtentReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
-	public void onTestStart(ITestResult result) {
-
+	
+	public void onTestStart(ITestResult result) { //At the time of execution starts, it will fetch the method name and add it to reports
 		ITestListener.super.onTestStart(result);
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
-
 	}
 
 	public void onTestSuccess(ITestResult result) {
-
 		ITestListener.super.onTestSuccess(result);
 		extentTest.get().log(Status.PASS, "Test Passed");
-
 	}
+	
 	public void onTestFailure(ITestResult result) {
-
 		ITestListener.super.onTestFailure(result);
 		extentTest.get().log(Status.FAIL, "Test Failed");
 		extentTest.get().fail(result.getThrowable());
@@ -64,30 +61,28 @@ public class Listeners implements ITestListener {
 		catch (Exception e) {
 		}
 	}
+	
 	public void onTestSkipped(ITestResult result) {
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
 		String testMethodName = result.getMethod().getMethodName();
-
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {//generate graph
-
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
+	
 	public void onTestFailedWithTimeout(ITestResult result) {
-
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
+	
 	public void onStart(ITestContext context) {
-
 		ITestListener.super.onStart(context);
 	}
 
-	public void onFinish(ITestContext context) {//generate report
-
+	public void onFinish(ITestContext context) {
 		ITestListener.super.onFinish(context);
-		extent.flush();
+		extent.flush();     //generate report
 	 }
 	
 }

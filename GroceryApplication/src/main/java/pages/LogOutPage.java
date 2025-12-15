@@ -16,11 +16,13 @@ public class LogOutPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void clickOnAdmin() {
+	public LogOutPage clickOnAdmin() {
 		admin.click();
+		return this;
 	}
-	public void clickOnLogOut() {
+	public LogOutPage clickOnLogOut() {
 		logout.click();
+		return this;
 	}
 	public boolean isSignInPageDisplayed() {
 		return signInPage.isDisplayed();

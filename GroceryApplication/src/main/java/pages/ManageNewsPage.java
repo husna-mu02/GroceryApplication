@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement manageNews;
+	
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")WebElement newButton;
 	@FindBy(xpath = "//textarea[@id='news']")WebElement newsTextField;
 	@FindBy(xpath = "//button[text()='Save']")WebElement saveButton; 
@@ -16,10 +16,6 @@ public class ManageNewsPage {
 	public ManageNewsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
-
-	public void clickTheManageNews() {
-		manageNews.click();
 	}
 	
 	public void clickNew() {

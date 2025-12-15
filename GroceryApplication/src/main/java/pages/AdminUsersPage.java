@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtilities;
 
 public class AdminUsersPage {
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer'] ")WebElement MoreInfo;
+	
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement NewButton;
 	@FindBy(xpath = "//input[@id='username']")WebElement UsernameField;
 	@FindBy(xpath = "//input[@id='password']")WebElement PasswordField;
@@ -22,24 +22,26 @@ public class AdminUsersPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickTheAdminUsers() {
-		MoreInfo.click();
-	}
-	public void clickNew() {
+	public AdminUsersPage clickNew() {
 		NewButton.click();
+		return this;
 	}
-	public void enterTheUsername(String adminUsername) {
+	public AdminUsersPage enterTheUsername(String adminUsername) {
 		UsernameField.sendKeys(adminUsername);
+		return this;
 	}
-	public void enterThePassword(String adminPassword) {
+	public AdminUsersPage enterThePassword(String adminPassword) {
 		PasswordField.sendKeys(adminPassword);
+		return this;
 	}
-	public void selectUserType() {
+	public AdminUsersPage selectUserType() {
 		PageUtilities pageUtilities = new PageUtilities();
 		pageUtilities.selectByVisibleText(UserType, "Admin");
+		return this;
 	}
-	public void clickSaveButton() {
+	public AdminUsersPage clickSaveButton() {
 		SaveButton.click();
+		return this;
 	}
 	public boolean isAlertDisplayed() {
 		return AdminAlert.isDisplayed();

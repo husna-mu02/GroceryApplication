@@ -20,14 +20,17 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);//initElements used to initialise web elements
 	}
 	
-	public void enterTheUsername(String userName2) {
+	public LoginPage enterTheUsername(String userName2) {
 		userName.sendKeys(userName2);
+		return this;
 	}
-	public void enterThePassword(String passWord2) {
+	public LoginPage enterThePassword(String passWord2) {
 		passWord.sendKeys(passWord2);
+		return this;
 	}
-	public void clickTheSighIn() {
+	public HomePage clickTheSighIn() {
 		signIn.click();
+		return new HomePage(driver);
 	}
 	public boolean isHomePageDisplayed() {
 	return dashBoard.isDisplayed();
